@@ -9,14 +9,26 @@ For this example, they are:
 * GenericMeeting.png
 * Leonardo_Da_Vinci.png
 
-The certificates are generated with a tex file.
+The list of participants is a csv file. The important field is the name of the participant which should be the second column of the file and the affiliation should be the fifth.
+
+The badges are created with a tex file called ID.tex
+You should change:
+* the name of the banner
+* the size of the badge (if needed)
+
+The Python scripts should run without modifications:
+python make_badges.py
+python compose_badges.py
+finally you should run a pdflatex main.tex
+(I do not know why this does not run properly in the Python script)
+The resulting main.pdf file should have the badges in pairs, so that you can have them side by side, you can cut it, fold it and you have a badge which is identical in both front and back.
+
+The certificates are generated with a tex file called certificate.tex
 You should change:
 * the name of the banner
 * the name of the file with the signature
 * the name of the chair of the LOC (as well as the text coming with it)
 * the text of the certificate
-
-The list of participants is a csv file. The important field is the name of the participant which should be the second column of the file.
 
 The Python script should run without modifications:
 python makeCertificates.py
